@@ -1,0 +1,16 @@
+Assignment 2
+Name: Syed Muhammad Zaeem
+Reg #: 5776
+
+In this assignment I learned and applied: how to use javascript and jquery (along with anonymous functions)effectively, 
+revised my html / css skills, learned how to use angular js properly, and most of all dealing with online date and how 
+to update webpage automatically after some specific time. 
+
+
+Refrences:
+-google
+-w3school.com
+
+
+Github link:
+https://github.com/ZaeemHasan/Asgn2-Zaeem_5776/

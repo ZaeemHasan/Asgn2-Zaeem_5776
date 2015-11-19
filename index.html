@@ -1,0 +1,92 @@
+<HTML>
+
+<head> 
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="asgnstyle.css">
+<link rel="shortcut icon" type="image/x-icon" href="images/favi.png">
+<title> MyDashboard </title>
+ 
+</head>
+
+<body > 
+
+<div id="nav">
+	<h1>MyDashboard</h1>
+</div>
+
+<div id="gapdiv">
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+
+<div class="row ">
+	<div class="col-md-3"></div>
+	<div class="col-md-6"  id="showdiv">
+		<div id="w1">
+			<ul id="clock">	
+				<li id="sec"></li>
+				<li id="hour"></li>
+				<li id="min"></li>
+			</ul>
+			
+			<center><button class="btn btn-info" id="b1"><span class="glyphicon glyphicon-circle-arrow-left"></span> Back To Dashboard </button></center>
+		</div>
+		<div id="w2">
+			<br/><br/><br/>
+			<div id="cal"></div>
+			<br/><br/><br/>
+			<center><button class="btn btn-info" id="b2"><span class="glyphicon glyphicon-circle-arrow-left"></span> Back To Dashboard </button></center>
+		</div>
+		<div ng-app="predic" id="w3"> 
+			<br/><br/><br/>
+			<div id="pdc" ng-controller="pre"> 
+				<div>
+					<center>
+						<h1>Forecast For: {{ city }}</h1>
+						<h2>Current Week Day: {{ wday }} </h2>
+						<h2>Current Temperature: {{ tempC }} &degC / {{ tempF }} &degF</h2>
+						<div id="fu"></div>
+					</center>
+				</div>	
+			</div>
+			<br/><br/><br/>
+			<center><button class="btn btn-info" id="b3"><span class="glyphicon glyphicon-circle-arrow-left"></span> Back To Dashboard </button></center>
+		</div>
+	</div>
+	<div class="col-md-3"></div>
+</div>
+<div class="row" id="widget">
+	<div class="col-md-2"></div>
+	<div class="col-md-2" id="c1">
+		Clock
+		<div class="card">
+			Current Time: <br/><span id="tme"></span>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-2" id="c2">
+		Calendar
+		<div class="card">
+			Current Date: <br/><span id="dte"></span>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-2" id="c3">
+		Weather
+		<div class="card" ng-app="predic">
+			Current Weather: <br/><span id="wthr" ng-controller="pre"></span>
+		</div>
+	</div>
+	<div class="col-md-2"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+<footer>
+Created By: S.M. Zaeem - Copyright &#169 2015
+</footer>
+</HTML>
